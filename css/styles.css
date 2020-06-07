@@ -1,0 +1,132 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  min-width: 150px;
+  min-height: 30px;
+  margin-left: 0px;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.one {
+  position: relative;
+  color: blue;
+  background-color: wheat;
+  transition: background-color 250ms linear 250ms,
+    background-color 250ms linear 250ms;
+  overflow: hidden;
+}
+
+.one::before {
+  position: absolute;
+  transform: translateX(105px);
+  transition: transform 250ms linear 250ms;
+
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  background-image: url(../images/clock-one.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.one::after {
+  position: absolute;
+  transform: translate(105px, 35px);
+  transition: transform 250ms linear 250ms;
+
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  background-image: url(../images/clock-two.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.one:hover,
+.one:focus {
+  color: wheat;
+  background-color: blue;
+}
+
+.one:hover::before,
+.one:focus::before {
+  transform: translate(105px, -35px);
+}
+
+.one:hover::after,
+.one:focus::after {
+  transform: translate(105px);
+}
+
+.two {
+  position: relative;
+  color: green;
+  background-color: tan;
+  transition: background-color 250ms linear 250ms,
+    background-color 250ms linear 250ms;
+  overflow: hidden;
+}
+
+.two:hover,
+.two:focus {
+  color: tan;
+  background-color: green;
+}
+
+.two::before {
+  position: absolute;
+  transform: translateX(105px);
+  transition: transform 250ms linear 250ms;
+
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  background-image: url(../images/clock-three.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.two::after {
+  position: absolute;
+  transform: translate(105px, 35px);
+  transition: transform 250ms linear 250ms;
+
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  background-image: url(../images/clock-four.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.two:hover::before,
+.two:focus::before {
+  transform: translate(105px, -35px);
+}
+
+.two:hover::after,
+.two:focus::after {
+  transform: translate(105px);
+}
